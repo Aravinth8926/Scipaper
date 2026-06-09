@@ -1,4 +1,4 @@
-# SciPaper AI 🚀
+# SciPaper AI 
 
 > Your AI Research Partner for Flawless Scientific Publications
 
@@ -9,34 +9,34 @@ A full-stack AI-powered SaaS platform that helps researchers and academics perfe
 [![Prisma](https://img.shields.io/badge/Prisma-5.22.0-2D3748)](https://www.prisma.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38B2AC)](https://tailwindcss.com/)
 
-## ✨ Features
+##  Features
 
-### 🔍 Intelligent Document Analysis
+### Intelligent Document Analysis
 - **LaTeX Error Detection**: Automatically identify and fix syntax errors, undefined control sequences, and environment issues
 - **Citation Validation**: Verify references, check citation keys, and ensure bibliography consistency
 - **Format Checking**: Validate compliance with journal-specific formatting requirements
 - **Readability Analysis**: Get AI-powered suggestions to improve scientific writing clarity
 
-### 📊 Smart Dashboard
+### Smart Dashboard
 - Real-time document analysis with detailed issue breakdowns
 - Interactive issue fixing with visual feedback
 - Document history and tracking
 - Performance metrics and quality scores
 
-### 🎨 Professional UI/UX
+### Professional UI/UX
 - Modern glassmorphism design
 - Full dark mode support
 - Responsive across all devices
 - Smooth animations with Framer Motion
 - Drag & drop file uploads
 
-### 🔐 Authentication & Security
+### Authentication & Security
 - Secure user authentication
 - Private document storage per user
 - SQLite database with Prisma ORM
 - Session management with localStorage
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Next.js 14** - React framework with App Router
@@ -57,7 +57,7 @@ A full-stack AI-powered SaaS platform that helps researchers and academics perfe
 - **Prettier** - Code formatting
 - **TypeScript** - Static type checking
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+ and npm
@@ -104,7 +104,7 @@ npm run dev
 http://localhost:3000
 ```
 
-## 📖 Usage
+## Usage
 
 ### Creating an Account
 1. Navigate to `/sign-up`
@@ -125,7 +125,7 @@ http://localhost:3000
 - Track your document's quality score
 - Download or share your analyzed documents
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 scipaper-ai/
@@ -151,7 +151,7 @@ scipaper-ai/
 └── README.md
 ```
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/auth/signup` - Create new account
@@ -163,7 +163,7 @@ scipaper-ai/
 - `POST /api/documents` - Create new document
 - `POST /api/documents/[id]/analyze` - Analyze document
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Users
 - id, email, password, name
@@ -178,7 +178,7 @@ scipaper-ai/
 - severity, category, message
 - line number, suggested fix
 
-## 🎯 Roadmap
+## Roadmap
 
 - [ ] Real AI integration with OpenAI GPT-4
 - [ ] Multiple LaTeX compiler support
@@ -191,7 +191,7 @@ scipaper-ai/
 - [ ] Stripe payment integration
 - [ ] Advanced analytics dashboard
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -201,17 +201,17 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
+## Author
 
 **Aravinth**
 - GitHub: [@Aravinth8926](https://github.com/Aravinth8926)
 - Email: aravinth8926@gmail.com
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Next.js team for the amazing framework
 - Vercel for hosting platform
@@ -219,7 +219,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Tailwind CSS for utility-first styling
 - Prisma for the excellent ORM
 
-## 📞 Support
+## Support
 
 If you have any questions or run into issues, please open an issue on GitHub.
 
