@@ -1,0 +1,87 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  password      String
+  name          String
+  avatar        String?
+  institution   String?
+  role          String    @default("RESEARCHER")
+  plan          String    @default("FREE")
+   
+  documents     Document[]
+  latexErrors   LatexError[]
+   
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+   
+  @@map("users")
+}
+
+model Document {
+  id              String          @id @default(cuid())
+  title           String
+  fileName        String
+  fileUrl         String
+  fileSize        Int
+  fileType        String
+  mimeType        String
+  content         String?
+   
+  status          String          @default("UPLOADED")
+  targetJournal   String?
+  documentType    String          @default("ARTICLE")
+   
+  overallScore    Float?
+  latexScore      Float?
+  citationScore   Float?
+  formatScore     Float?
+  readabilityScore Float?
+   
+  userId          String
+  user            User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+   
+  latexErrors     LatexError[]
+   
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+   
+  @@index([userId])
+  @@index([status])
+  @@map("documents")
+}
+
+model LatexError {
+  id              String        @id @default(cuid())
+  documentId      String
+  document        Document      @relation(fields: [documentId], references: [id], onDelete: Cascade)
+   
+  userId          String
+  user            User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+   
+  severity        String
+  category        String
+  message         String
+  description     String?
+  line            Int?
+  column          Int?
+  lineContent     String?
+  suggestedFix    String?
+   
+  isResolved      Boolean       @default(false)
+  resolvedAt      DateTime?
+   
+  createdAt       DateTime      @default(now())
+   
+  @@index([documentId])
+  @@index([severity])
+  @@map("latex_errors")
+}
