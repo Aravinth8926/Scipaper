@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: scipaper-ai
+    runtime: node
+    plan: free
+    buildCommand: npm install && npx prisma generate && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_APP_NAME
+        value: SciPaper AI
+      - key: DATABASE_URL
+        fromDatabase:
+          name: scipaper-db
+          property: connectionString
+
+databases:
+  - name: scipaper-db
+    plan: free
+    databaseName: scipaper
+    user: scipaper
